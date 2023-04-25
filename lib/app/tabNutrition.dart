@@ -3,6 +3,7 @@ import 'package:food_fetish/app/recipe_json_convert.dart';
 import 'package:food_fetish/app/template/recipe_details.dart';
 import 'package:collection/collection.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:food_fetish/app/func/logging.dart';
 
 class NutritionPage extends StatefulWidget {
   Hit data;
@@ -18,7 +19,7 @@ class _NutritionPageState extends State<NutritionPage> {
   @override
 
   Widget build(BuildContext context) {
-
+    printLog("User Access NUTRITION Page for: ${widget.title}");
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(

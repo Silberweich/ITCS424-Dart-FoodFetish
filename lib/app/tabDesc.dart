@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:food_fetish/app/recipe_json_convert.dart';
 import 'package:food_fetish/app/template/recipe_details.dart';
+import 'package:food_fetish/app/func/logging.dart';
 
 class DescriptionPage extends StatefulWidget {
   //static const routePath = '/recipe-details';
@@ -18,7 +19,7 @@ class DescriptionPage extends StatefulWidget {
 class DescriptionPageState extends State<DescriptionPage>{
   @override
   Widget build(BuildContext context) {
-
+    printLog("User Access NUTRITION Page for: ${widget.title}");
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(

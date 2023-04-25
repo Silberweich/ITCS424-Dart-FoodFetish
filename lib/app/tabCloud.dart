@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:food_fetish/app/recipe_json_convert.dart';
+import 'package:food_fetish/app/func/logging.dart';
 
 class CloudPage extends StatefulWidget {
   Hit data;
@@ -15,6 +16,8 @@ class CloudPage extends StatefulWidget {
 class _CloudPageState extends State<CloudPage> {
   @override
   Widget build(BuildContext context) {
+    printLog("User Access LABEL Page for: ${widget.title}");
+
     List<Widget> data_list= [];
     //num overall = widget.data.recipe.cautions.length + widget.data.recipe.dietLabels.length + widget.data.recipe.healthLabels.length + 10;
 

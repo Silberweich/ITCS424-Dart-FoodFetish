@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:food_fetish/app/func/logging.dart';
 
 FullData fullDataFromJson(String str) => FullData.fromJson(json.decode(str));
 

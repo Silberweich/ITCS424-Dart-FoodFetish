@@ -7,6 +7,7 @@ import 'recipe_json_convert.dart';
 import 'package:flutter/services.dart';
 import 'errorPage.dart';
 import 'package:http/http.dart' as http;
+import 'package:food_fetish/app/func/logging.dart';
 
 String APP_ID = "6f2068fd";
 String APP_KEY = "f07511d028706a39501d93d982cf92f6";
@@ -112,7 +113,9 @@ class HomePageState extends State<HomePage> {
   }
 
   String makeURL(String query) {
-    return "https://api.edamam.com/api/recipes/v2?type=public&q=$query&app_id=$APP_ID&app_key=$APP_KEY";
+    String url = "https://api.edamam.com/api/recipes/v2?type=public&q=$query&app_id=$APP_ID&app_key=$APP_KEY";
+    printLog("User Searched: $query :: $url");
+    return url;
   }
 
 }

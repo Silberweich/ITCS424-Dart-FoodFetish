@@ -4,6 +4,7 @@ import 'package:food_fetish/app/tabNutrition.dart';
 import 'package:food_fetish/app/tabCloud.dart';
 import 'package:food_fetish/app/recipe_json_convert.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:food_fetish/app/func/logging.dart';
 
 class TabRenderer extends StatefulWidget {
   Hit data;
@@ -26,6 +27,7 @@ class _TabRendererState extends State<TabRenderer>
 
   @override
   Widget build(BuildContext context) {
+    printLog("User has rendered TAB for: ${widget.title}");
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

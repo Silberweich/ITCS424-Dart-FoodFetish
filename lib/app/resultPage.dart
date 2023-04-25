@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'recipe_json_convert.dart';
 import 'dart:developer';
 import 'package:food_fetish/app/errorPage.dart';
+import 'package:food_fetish/app/func/logging.dart';
 
 class ResultPage extends StatefulWidget {
   FullData data;
@@ -19,12 +20,10 @@ class ResultPage extends StatefulWidget {
 
 class ResultPageState extends State<ResultPage>{
   late Future<String> data;
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
+
   @override
   Widget build(BuildContext context) {
+    printLog("User Access SEARCH Result Page for: ${widget.title}");
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
