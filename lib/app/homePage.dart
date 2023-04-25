@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'errorPage.dart';
 import 'package:http/http.dart' as http;
 import 'package:food_fetish/app/func/logging.dart';
+import 'package:food_fetish/app/loggingPage.dart';
 
 String APP_ID = "6f2068fd";
 String APP_KEY = "f07511d028706a39501d93d982cf92f6";
@@ -23,6 +24,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   TextEditingController ingredientController = TextEditingController();
+  String logDirectory = " ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +38,21 @@ class HomePageState extends State<HomePage> {
             fontWeight: FontWeight.w600,
           ),
         ),
+        actions: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(right: 20.0),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => LoggingPage()),
+                (route) => true);},
+            child: const Icon(
+                Icons.file_open
+            ),
+          )
+        ),
+      ],
       ),
       
       body: Center(
@@ -117,5 +134,4 @@ class HomePageState extends State<HomePage> {
     printLog("User Searched: $query :: $url");
     return url;
   }
-
 }

@@ -26,34 +26,9 @@ class _NutritionPageState extends State<NutritionPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
-                children: [
-                  Image.network(
-                    widget.data.recipe.image,
-                    height: 250.0,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
-                  Positioned(
-                    bottom: 0.0,
-                    left: 0.0,
-                    right: 0.0,
-                    child: Container(
-                      height: 15.0,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(30.0),
-                          topRight: Radius.circular(30.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top: 0.0,
+                  top: 15.0,
                   bottom: 15.0,
                   left: 15.0,
                   right: 15.0,
@@ -68,11 +43,14 @@ class _NutritionPageState extends State<NutritionPage> {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                    Container(
+                      padding: new EdgeInsets.only(right: 13.0),
+                      child: 
                         Text(
                           "Recipe Name: ${widget.data.recipe.label}",
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          softWrap: false,
                           style: kNormalTitleTextStyle,
                         ),
                         // InkWell(
@@ -84,7 +62,6 @@ class _NutritionPageState extends State<NutritionPage> {
                         //     print('My fav');
                         //   },
                         // ),
-                      ],
                     ),
                     SizedBox(
                       height: 25.0,

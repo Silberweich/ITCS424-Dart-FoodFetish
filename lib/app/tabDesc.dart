@@ -68,23 +68,25 @@ class DescriptionPageState extends State<DescriptionPage>{
                     SizedBox(
                       height: 10.0,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                    Container(
+                      padding: new EdgeInsets.only(right: 13.0),
+                      child: 
                         Text(
                           "Recipe Name: ${widget.data.recipe.label}",
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          softWrap: false,
                           style: kNormalTitleTextStyle,
                         ),
-                        InkWell(
-                          child: Icon(
-                            Icons.favorite_border,
-                            color: Colors.black54,
-                          ),
-                          onTap: () {
-                            print('My fav');
-                          },
-                        ),
-                      ],
+                        // InkWell(
+                        //   child: Icon(
+                        //     Icons.favorite_border,
+                        //     color: Colors.black54,
+                        //   ),
+                        //   onTap: () {
+                        //     print('My fav');
+                        //   },
+                        // ),
                     ),
                     SizedBox(
                       height: 25.0,
