@@ -6,7 +6,7 @@
 * Phichayut Ngoennim (6388035/ Sec2/ CN)
 * Phuthana Ampunant (6388002/ Sec2/ CN)
 
-# SEE IMPORTANT DETAILS IN THE SUBMITTED REPORT
+# --SEE IMPORTANT DETAILS IN THE SUBMITTED REPORT--
 
 ### Project Related Stuffs
 ```
